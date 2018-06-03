@@ -18,7 +18,7 @@ rm("Household")
 Household2$datetime <- paste(Household2$Date, Household2$Time)
 Household2$datetime <- as.POSIXct(Household2$datetime)
 
-# Creating and saving the plots
+# Creating and saving the plot to a png file
 par(mfrow = c(2,2), mar = c(4.2, 4, 3, 2.1))
 plot(Household2$Global_active_power~Household2$datetime, type = "l", xlab = "", ylab = "Global Active Power")
 plot(Household2$datetime, Household2$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
