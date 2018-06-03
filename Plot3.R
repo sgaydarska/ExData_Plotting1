@@ -18,7 +18,7 @@ rm("Household")
 Household2$datetime <- paste(Household2$Date, Household2$Time)
 Household2$datetime <- as.POSIXct(Household2$datetime)
 
-# Creating and saving the plot
+# Creating and saving the plot to a png file
 plot(Household2$Sub_metering_1~Household2$datetime, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(Household2$Sub_metering_2~Household2$datetime, col = "red")
 lines(Household2$Sub_metering_3~Household2$datetime, col = "blue")
